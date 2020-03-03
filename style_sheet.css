@@ -1,155 +1,267 @@
-html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <title> Travel Page </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://image.flaticon.com/icons/svg/184/184671.svg" type="image/gif" sizes="16x16">
-  </head>
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth}
 
-  <body>
-    <ul class="nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a class="active" href="travel.html">Travel</a></li>
-      <li><a href="cookbook.html">Cookbook</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="walkthrough.html">Two Column</a></li>
-      <li><a href="gamepage.html">Risk!</a></li>
-    </ul>
+html {
+	scroll-behavior: smooth; }
 
-    <div class="content">
-      <h1>
-        Travel Project Page
-      </h1>
+body {
+	margin: 0;
+	background-color: #ddd; }
 
-      <h4>
-        
-        <br>
-       
-      </h4>
+h4 {
+	text-align: center;
+	color: #000080;}
 
-      <img class="line" src="images/line.png">
+h6 {
+	color: #2e6930;
+	text-shadow: 0px 2px 2px #4d4d4d;
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 20px;
+	-webkit-text-stroke: 1px black; }
 
-      <div class="row">
-        <div class="columnLeft50">
-          <h2>
-            Colorful Colorado
-          </h2>
+.pic {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;
+	width: 90%;
+	background-color: black;
+	box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2); }
 
-          <p>
-            Colorado is a beautiful state and somewhere I think anyone would have a wonderful time visiting. Colorado is home to world class sports teams, one of a kind music venues, and museums filled with artwork, natural treasures, and historical articfacts to spark anyones interest. Summers can be filled with swiming, hiking, or white-water rafting and during the winter there is some of the best skiing and snowboarding in the world. With its wide array of varying landscapes, huge range of small towns to big cities, and the countless indoor and outdoor activities, there is always a little something for everyone in Colorado.
-          </p>
+.line {
+	display: block;
+	margin: 0px;
+	width: 100%;
+	height: 10px; }
 
-          <img src="images/colorful_colorado.jpg" class="pic" alt="Welcome sign to Colorful Colorado">
+.box {
+	margin-top: 20%;
+	display: block;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 2px solid #394b58;
+  border-radius: 7px;}
 
-          <p>
-            On this page I will take some time to describe some of the unique things about Colorado. I will share with you some of the things that I enjoy doing and the places that I love to go visit. I hope that if you take a trip to Colorful Colorado you will have a great time just like I do when I get to go back to visit!
-          </p>
-        </div>
+.row {
+	content: "";
+	display: table;
+	clear: both; }
 
-        <div class="columnRight50">
-          <h2>
-            Geography of Colorado
-          </h2>
+.threeColumns {
+	float: left;
+	width: 33.33%;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-bottom: 0px;
+	padding-left: 15px; }
 
-          <p>
-            Colorado is notable for its diverse geography, which includes alpine mountains, high plains, deserts with huge sand dunes, and deep canyons.The eastern most side of Colorado is relativly flat, but as you travel west you begin to see the most defining characteristic of the state, the Colorado Rocky Mountains. Running north to south, right through the center of the state the Rockies tower of the the eastern plains. Carving their way through the mountains are countless rivers and streams that break up the landscape.
-          </p>
+.columnLeft30 {
+	float: left;
+	width: 30%;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px; }
 
-          <img src="images/rocky_mountain_national_park.jpg" class="pic" alt="Picture of a lake surrounded by mountains in Rocky Mountain National Park">
+.columnLeft50 {
+	float: left;
+	width: 50%;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px; }
 
-          <p>
-            Further to the south near the small town of Alamosa is a little known feature, Great Sand Dunes National Park. It is home to the largest sand dunes in north america that climb of 700 feet high.
-          </p>
+.columnLeft70 {
+	float: left;
+	width: 70%;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px; }
 
-          <img src="images/sand_dunes.jpg" class="pic" alt="Picture of the sand dunes at Great Sand Dunes National Park">
-        </div>
-      </div>
+.columnRight30 {
+	float: right;
+	width: 30%;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px; }
 
-      <div class="row">
-        <h2>
-          Camping and Stargazing
-        </h2>
+.columnRight50 {
+	float: right;
+	width: 50%;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px; }
 
-        <p>
-          In the spring and summer one of the things that I enjoyed doing the most was taking a trip up to the mountains to go camping with my wife and dog. There are countless state and national forests that let you get away from the hustle and bustle of city life and just get out and enjoy nature.
-				</p>
+.columnRight70 {
+	float: right;
+	width: 70%;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px; }
 
-        <img src="images/colorado_camping.jpg" class="pic" style="width: 60%" alt="Picture of camping tents surrounded by mountains">
+.content {
+  margin-left: 240px;
+  padding: 1px 16px;
+  height: 100%; }
 
-        <p>
-          As an astronomy nerd, another big advantage for me was being able to get out away from city lights and even get a mile or two higher above sea level to get absolutly beautiful views of the night sky. If you ever get the chance to go camping for a day or two in the wonderful Colorado Rockies, make sure you take it!
-        </p>
+.blogNav {
+	list-style-type: circle;
+	margin: 0;
+  width: 200px;
+	min-width: 150px;
+	height: 100%;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	padding-left:0;
+	overflow: auto;
+	position: fixed;
+  top: 0px;
+	right: 0px;
+	background-color: #eee;
+	box-shadow: 1px 1px 9px 3px rgba(0, 0, 0, 0.2);}
 
-        <div class="threeColumns">
-          <img src="images/ring.jpg" class="pic" style="margin-top:28%">
-        </div>
+.blogPost {
+	float: left;
+	width: 84%;
+	padding-top: 0px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px; }
 
-        <div class="threeColumns">
-          <img src="images/milky_way.jpg" class="pic">
-        </div>
+.post {
+	font-family: 'Audiowide'; }
 
-        <div class="threeColumns">
-          <img src="images/night_sky.jpg" class="pic" style="margin-top:28%">
-        </div>
-        
-      </div>
+.heading {
+	font-family: 'Press Start 2P';
+	color: #2e6930; }
 
-      <div class="row">
-        <div class="columnLeft50">
-          <h2>
-            Music!
-          </h2>
+a:link {
+	color: #2e6930;	}
 
-          <p>
-            Colorado has great music venues. Catch a show at the world famous outdoor ampatheater Red Rocks or go see the Denver Symphony Orchestra when the play music from your favorite movies, tv shows, or video games during their anual "Symphonic Tribute to Comicon".
-          </p>
-        </div>
+a:visited {
+	color: #2e6930; }
 
-        <div class="columnRight50">
-          <img src="images/red_rocks.jpg" class="pic">
-        </div>
-      </div>
+a:active {
+	color: grey; }
 
-      <div class="row">
-        <div class="columnLeft50">
-          <img src="images/coors_feild.jpg" class="pic">
-        </div>
+a:hover {
+	color: grey; }
 
-        <div class="columnRight50">
-          <h2>
-            Sports!
-          </h2>
 
-          <p>
-            If you aren't in the mood for music but checking out a game is more your speed you still have plenty of options. Catch a game at Mile High Stadium, home of the Denver Broncos or watch the Colorado Rockies play at Coors Feild. If you want to go inside and get out of the sun cool off in the ice areana and watch the Avalanch play or bounce over to take in a Nuggets game. You can even head down to Colorado Springs, home of the US's official olympic training facility. You are sure to find something to watch here!
-        </div>
-      </div>
+ul.nav {
+	list-style-type: none;
+	margin: 0;
+  padding: 0;
+  width: 240px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  top: 0;
+	box-shadow: 1px 1px 9px 3px rgba(0, 0, 0, 0.2);}
 
-      <div class="row">
-        <div class="columnLeft50">
-          <h2>
-            Museums Oh My!
-          </h2>
+ul.nav li a {
+  display: block;
+  color: #081108;
+  padding: 8px 16px;
+  text-decoration: none; }
 
-          <p>
-            If you want to let your inner nerd show a little more, Colorado still has you covered. The Denver Museum of Art, the Colorado Museum of Nature and Scince, the National Oceanic and Atmospheric Administration Observatory, Wings Over the Rockies Air and Space Museum. Colorado has you covered there too.
-          </p>
+ul.nav li a.active {
+  background-color: #2e6930;
+  color: white; }
 
-          <div class="box">
-            <h2>
-              <i>Come Visit Colorful Colorado!!!</i>
-            </h2>
+ul.nav li a:hover {
+  background-color: #555;
+  color: white; }
 
-            <p>
-              <i>I hope you learned a little somthing about this amazing state. If you ever get a chance to visit I am sure you will have and absolute BLAST!!!</i>
-            </p>
-          </div>
-        </div>
+td.left {
+	width: 275px; }
 
-        <div class="columnRight50">
-          <img src="images/blue_bear.jpg" class="pic">
-        </div>
-      </div>
-    </div>
-  </body
-</html>
+td.right {
+	width: 125px; }
+
+.recipeColumn {
+  float: left;
+  width: 50%;
+  padding-left: 20px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px; }
+
+.recipeRow:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@media screen and (max-width: 1400px) {
+	div.blogPost {
+		width: 81%;}}
+
+@media screen and (max-width: 1300px) {
+	div.blogPost {
+		width: 78%;}}
+
+@media screen and (max-width: 1200px) {
+  ul.nav {
+		width: 100%;
+		height: auto;
+		position: fixed;
+		top: 0; }
+
+  ul.nav li a {
+		float: left;
+		padding: 15px; }
+
+	div.content {
+		margin-top: 40px;
+		margin-left: 0; }
+
+	div.box {
+		margin-top: 10%;}
+
+	div.blogNav {
+		width: 25%;
+		padding-top: 0px;
+		top: 45px;
+		z-index: -1; }
+
+	div.blogPost {
+		width: 75%;}}
+
+@media screen and (max-width: 555px) {
+	div.blogPost {
+		width: 71%; }}
+
+@media screen and (max-width: 510px) {
+	ul.nav {
+		position: relative;
+		top: 0; }
+
+	ul.nav li a {
+		text-align: center;
+		float: none; }
+
+	div.content {
+		margin-top: 0;
+		margin-left: 0; }
+
+	div.box {
+		margin-top: 0%;}
+
+	div.blogNav {
+		width: 0px;
+		height: 0px;
+		box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);}
+
+	div.blogPost {
+		width: 100%; }
+
+	div.recipeColumn {
+		width: 100%; }}
