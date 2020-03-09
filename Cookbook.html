@@ -7,260 +7,426 @@
 	<title> Cookbook </title>
     <meta charset="utf-8">
  
+ 	<style>
+ 	
+ 	/* Makes the box for the menu bar visible as a box */
+* {
+box-sizing: border-box; }
+
+/* Creates a table type of layout for everything in the row class */
+.row {
+content: "";
+display: table;
+clear: both; }
+
+/* Sets the width and padding for everything in the columnLeft class alongside pushing it all to the left */
+.columnLeft {
+float: left;
+width: 30%
+padding: 20px; }
+
+/* Sets the width and padding for everything in the columnRight class alongside pushing it all to the right */
+.columnRight {	
+float: right;
+width: 70%
+padding: 20px; }	
+
+/* Moves everything in the columnLeft50 class to the left and adds some padding around it. */
+.columnLeft50 {
+float: left;
+width: 50%;
+padding-top: 0px;
+padding-right: 15px;
+padding-bottom: 10px;
+padding-left: 15px; }
+
+/* Makes everything in the class move to the right side of the screen, taking up half the screen. Also adds space on all sides.	*/
+.columnRight50 {
+float: right;
+width: 50%;
+padding-top: 0px;
+padding-right: 15px;
+padding-bottom: 10px;
+padding-left: 15px; }	
+
+/* Aligns the text to the left and adds padding along with a specific for width */
+.recipeColumn {
+float: left;
+width: 50%;
+padding-left: 20px;
+padding-right: 10px;
+padding-top: 10px;
+padding-bottom: 10px; }	
+
+/* changes width setting for everything in div class recipeColumn */	
+div.recipeColumn {
+width: 100%; }}	
+
+/* displays those in :after as a table to allow for items to be laid out as intended */
+.recipeRow:after {
+content: "";
+display: table;
+clear: both; }	
+
+/* makes some defaults, such as the margin, padding, and height to every item */	
+.content {
+margin-left: 240px;
+padding: 1px 16px;
+height: 100%; 
+width: 100%}	
+
+/* adds margin defaults for everything in div content */
+div.content {
+margin-top: 40px;
+margin-left: 0; }	
+
+/* Adds specifics for each image in the pic class. Shows them as blocks, automatically assigns them based on whatever side theyre on, and gives them a background color and shadow effect surrounding each image */
+.pic {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 25px;
+width: 90%;
+background-color: black;
+box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2); }
+
+/* Adds some detais to anything in the box class. Shows it as a block with some padding with color and border */
+.box {
+margin-top: 20%;
+display: block;
+padding-left: 15px;
+padding-right: 15px;
+border: 2px solid #394b58;
+border-radius: 7px;}	
+
+/* Makes the navigation bar lightgrey, and adds a shadow effect around it for aesthetic */
+ul.nav {
+list-style-type: none;
+margin: 0px;
+padding: 0px;
+background-color: DarkSlateGrey;
+overflow: hidden;
+box-shadow: 1px 1px 9px 3px rgba(0, 0, 0, 0.2); }
+
+
+/* Changes the color of the links in the navigation bar to firebrick, adds some padding, and aligns it to the left */
+li a.nav {
+float: left;
+display: block;
+color: Black;
+padding: 8px 16px;
+text-align: left; }
+
+/* Changes the color of lists in the row class along with adding padding and aligning it to the left */
+li a.recipeLink {
+color: Black;
+padding: 8px 16px;
+text-align: left; }
+
+/* Changes the color of the box surrounding each link to lightsteelblue and changes the link itself to white in the navigation bar */
+li a:hover {
+background-color: DarkGrey;
+color: Black }
+
+/* Displays everything in the recipeRow class as a table */	
+.recipeRow {
+content: "";
+float: left;
+width: 100%;
+display: table;
+clear: both; }
+
+/* Changes width for items in the td left and right class */
+td.left {
+width: 275px; }
+
+td.right {
+width: 125px; }
+
+/* Changes color, assigns float to left, and changes width to 80% to all in an ol in the instructions class */
+ol .instructions {
+color: DarkSlateGrey;
+float: left;
+width: 80%; }
+
+/* Aligns text with the alignLeft id to the left */
+#alignLeft {
+text-align: left;}
+
+/* Changes the color of everything in the body to firebrick and the background lightyellow. Also adds some text style modifications */
+body {
+margin: 0;
+background-color: DarkGrey; 
+color: Black;
+font-family: "courier new", monospace, serif;
+font-weight: bold; }
+
+/* Aligns the text to anything within an ol list to the left */
+ol {
+text-align: left; }	
+
+/* Changes the color of each of the categories to their respective colors and aligns text to center*/
+p {
+color: White;
+text-align: center; }
+
+h1 {
+color: DarkSlateGrey;
+text-align: center; }
+
+h2 {
+color: DarkSlateGrey; 
+text-align: center;}
+
+h3 {
+color: DarkSlateGrey; 
+text-align: center; }
+
+h4 {
+color: DarkSlateGrey;
+text-align: center; }
+ 	
+ 	</style>
+ 
     </head>
      
      
 <body>
 	<ul class="nav">
       <li><a  href="index.html">Home</a></li>
-      <li><a href="Travel Page.html">Travel</a></li>
-      <li><a class="active" href="cookbook.html">Cookbook</a></li>
+      <li><a href="travelpage.html">Travel</a></li>
+      <li><a class="active" href="Cookbook.html">Cookbook</a></li>
       <li><a href="blog.html">Blog</a></li>
-  </ul>
-	  <div class="content">
-	  </body>
-	  
-	  <h1>
-	  Cookbook
-	  </h1>
-	  <div class="row">
-        <ol>
-          <li><a href="#pozole">Pozole</a></li>
-          <li><a href="#french">French Toast</a></li>
-          <li><a href="#burger">Homemade Burgers</a></li>
-         
-        </ol>
-      </div>
-
-      <img class="line" src="Images/line.png">
-
-      <div class="recipeRow">
-        <div class="recipeColumn" id="pozole">
-          <h2>
-            <u>Pozole</u>
-          </h2>
-
-          <p>
-           Pozole is a traditional Mexican soup or stew that is usually served at big family gatherings or holidays. 
-          </p>
-       <p>
-       Recipe was found at: 
-       </p>
-       <a href="https://www.thespruceeats.com/posole-pork-and-hominy-stew-2217534">Pozole Recipe </a>
-        </div>
-
-        <div class="recipeColumn">
-          <img class="pic" style="width: 50%" src="Images/Pozole.jpg" 
-        </div>
-      </div>
-
-      <div class="recipeRow">
-        <div class="recipeColumn">
-          <table border="2" cellpadding="2" style="margin-left: auto; margin-right: auto;">
-            <tr>
-              <td class="left"><h3>Ingredient</h3></td>
-              <td class="right"><h3>Quantity</h3></td>
-            </tr>
-
-            <tr>
-              <td class="left">Pork Shoulder</td>
-              <td class="right">2 pounds </td>
-            </tr>
-
-            <tr>
-              <td class="left">Garlic</td>
-              <td class="right">3 cloves </td>
-            </tr>
-
-            <tr>
-              <td class="left">Red Chiles of your choice</td>
-              <td class="right">3 Chiles </td>
-            </tr>
-
-            <tr>
-              <td class="left">Salt</td>
-              <td class="right">2 teaspoons</td>
-            </tr>
-
-            <tr>
-              <td class="left">Cooked Hominy</td>
-              <td class="right">3 1/2 cups</td>
-            </tr>
-
-            <tr>
-              <td class="left">Dried Mexican Oregano</td>
-              <td class="right">1 teaspoon</td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="recipeColumn">
-          <h3>
-            Instructions
-          </h3>
-          <ol>
-            <li>Gather the ingredients.</li><br>
-            <li>Cut the pork</li><br>
-            <li>Put the pork in cool water and bring to a boil, make sure to skim off foam.</li><br>
-            <li>Peel garlic and remove the stem and the seeds form the chile.</li><br>
-          <li>Add the garlic, chiles and salt to the pork.</li><br>
-           <li>Reduce the heat and cook for 90 minutes or you could put an oven-proof pot in a 350 F oven for 90 minutes.</li><br>
-           <li>After the pork is done cooking,add drained hominy and oregano and continue cooking </li><br>
-           <li>Finally, Serve the pozole in bowls. </li><br>
-           </ol>
-
-          <a href="#top">Top</a><br>
-        </div>
-      </div>
-
-      <br><img class="line" src="Images/line.png"><br>
-
-      <div class="recipeRow">
-        <div class="recipeColumn" id="french">
-          <h2>
-            <u>French Toast</u>
-          </h2>
-
-          <p>
-            One of my favorite breakfast foods out there is french toast, One day I was hungry and decided to use this recipe to make breakfast, Hope you enjoy!!
-         
-       </p>
-       <p>
-       Recipe was found at:
-       </p>      
-       <a href="https://www.mccormick.com/recipes/breakfast-brunch/quick-and-easy-french-toast">French Toast Recipe </a>
-        </div>
-
-        <div class="recipeColumn">
-          <img class="pic" style="width: 50%" src="Images/french toast.jpg" 
-        </div>
-      </div>
-
-      <div class="recipeRow">
-        <div class="recipeColumn">
-          <table border="2" cellpadding="2" style="margin-left: auto; margin-right: auto;">
-            <tr>
-              <td class="left"><h3>Ingredient</h3></td>
-              <td class="right"><h3>Quantity</h3></td>
-            </tr>
-
-            <tr>
-              <td class="left">Eggs</td>
-              <td class="right">1 </td>
-            </tr>
-
-            <tr>
-              <td class="left">Pure Vanilla extract</td>
-              <td class="right">1 teaspoon</td>
-            </tr>
-
-            <tr>
-              <td class="left">Cinnamon</td>
-              <td class="right">1/2 teaspoon</td>
-            </tr>
-
-            <tr>
-              <td class="left">Milk</td>
-              <td class="right">1/4 cup</td>
-            </tr>
-
-            <tr>
-              <td class="left">Bread</td>
-              <td class="right">4 slices</td>
-            </tr>
-
-          </table>
-        </div>
-
-        <div class="recipeColumn">
-          <h3>
-            Instructions
-          </h3>
-          <ol>
-            <li>Beat egg,vanilla,and cinnamon in a dish and stir in milk</li><br>
-            <li>Dip bread in egg mixture, on both sides evenly.</li><br>
-            <li>Cook bread slices on a lightly greased nonstick griddle or skillet.</li><br>
-             <li>Enjoy your french toast</li><br>
-          </ol>
-
-          <a href="#top">Top</a><br>
-        </div>
-      </div>
-
-    <br><img class="line" src="Images/line.png"><br>
-
-      <div class="recipeRow">
-        <div class="recipeColumn" id="burger">
-          <h2>
-            <u>Homemade Burger</u>
-          </h2>
-
-          <p>
-            One of my favorite summer foods is hamburgers, so I decided to add a hamburger recipe.         
-       </p>
-       <p>
-       Recipe was found at:
-       </p>      
-       <a href="https://www.kyleecooks.com/easy-basic-burger-recipe/">Hamburger Recipe </a>
-        </div>
-
-        <div class="recipeColumn">
-          <img class="pic" style="width: 50%" src="Images/burger.jpg" 
-        </div>
-      </div>
-
-      <div class="recipeRow">
-        <div class="recipeColumn">
-          <table border="2" cellpadding="2" style="margin-left: auto; margin-right: auto;">
-            <tr>
-              <td class="left"><h3>Ingredient</h3></td>
-              <td class="right"><h3>Quantity</h3></td>
-            </tr>
-
-            <tr>
-              <td class="left">Ground Beef</td>
-              <td class="right">2 lbs </td>
-            </tr>
-
-            <tr>
-              <td class="left">Pepper</td>
-              <td class="right">1 teaspoon</td>
-            </tr>
-
-            <tr>
-              <td class="left">Kosher Salt</td>
-              <td class="right">1 teaspoon</td>
-            </tr>
-
-            <tr>
-              <td class="left">Dijon Mustard</td>
-              <td class="right">2 tablespoons</td>
-            </tr>
-
-            <tr>
-              <td class="left">Worcestershire Sauce</td>
-              <td class="right">1.5 tablespoons</td>
-            </tr>
-
-          </table>
-        </div>
-
-        <div class="recipeColumn">
-          <h3>
-            Instructions
-          </h3>
-          <ol>
-            <li>Combine ground beef , pepper , salt, mustard and Worcestershire sauce.</li><br>
-            <li>Gently form mixture into 8 patties.</li><br>
-            <li>Heat grill or skillet to high.</li><br>
-             <li>Cook patties for 2-3 minutes on each side.</li><br>
-              <li>Serve on grilled hamburger buns with lettuce, cheese, tomato and onions.</li><br>
-               <li>Enjoy!!</li><br>
-          </ol>
-
-          <a href="#top">Top</a><br>
-        </div>
-      </div>
+	</ul>
+	<br>
+	
+	<div class="content">
+		<h1> Cook Book </h1>
+		<br>
+		<h3> This is my cookbook with very easy recipes for lonely people. Hope you enjoy these delicious, most likely, </p>
+			 frozen meals. 
+		<br>
+		<hr>
+		<br>
+		
+		<div class="row">
+			<ol>
+				<li> <a href="#grilledCheese" class="recipeLink">Grilled Cheese</a> </li>
+				<br>
+				<li> <a href="#kidsCuisine" class="recipeLink">Kids Cuisine</a> </li>
+				<br>
+				<li> <a href="#eggoWaffles" class="recipeLink">Eggo Waffles</a> </li>
+			</ol>
+			</div>
+			
+			
+			<br>
+			<hr>
+			<br>
+			
+			<div class="recipeRow">
+			<div class="recipeColumn">
+				<h2 id="grilledCheese"> Grilled Cheese </h2>
+				<p style="margin-left: 25 pix; margin-right: 25px"> Grilled cheese is an excellent choice as a sandwich. How could you go wrong with melted cheese and toasted bread. Excellent choice too if you are running on a budget. </p>
+				</div>
+				
+				<div class="recipeColumn">
+				<img class="pic" style="width: 50%" src="Images/grilledcheese.jpg">
+				</div>
+				</div>
+				
+				<div class="recipeRow">
+				<div class="recipeColumn">
+					<table style="margin-left: auto; margin-right: auto;" cellpadding="2" border="2" >
+					<tbody>
+						<tr>
+							<td class="left">
+								<h3> Ingredients </h3>
+							</td>
+							
+							<td class="right">
+								<h3> Quantity </h3>
+							</td>
+						</tr>
+							
+							<td class="left">
+								Toasted Bread
+							</td>
+															
+							<td class="right">
+								2 slices of bread
+							</td>
+							
+							</td>	
+						</tr>
+						
+						<tr>
+							
+							<td class="left">
+								Cheese
+							</td>
+							
+							<td class="right">
+								1 slice of cheese
+							</td>
+								
+						</tr>
+						
+						</tbody>
+					</table>
+				</div>
+				
+			
+				
+				<div class="recipeColumn">
+					<h3 id="alignLeft"> Instructions </h3>
+						<ol>
+							<li> Spread about 1 tablespoon butter on one side of each slice of bread. With butter side down, top each slice of bread with about ½ c cheddar. </li>
+							<br>
+							<li> Heat a nonstick skillet over medium heat with 1 tablespoon butter. When butter is melted add two slice of bread, butter side down. Cook until bread is golden and cheese is starting to melt, 2 minutes. Flip one pice of bread on top of the other and continue to cook 30 seconds. </li>
+							<br>
+							<li> Repeat for the second sandwich, wiping the skillet clean if necessary. </li>
+							<br>
+							<br>
+						</ol>
+					<a href="#top">Back to Top</a>
+				</div>
+			</div>
+			
+			<div class="recipeRow">
+			
+			<br>
+			<hr>
+			<br>
+			
+		</div>
+		
+		
+		
+		
+		
+			<div class="recipeRow">
+			<div class="recipeColumn">
+				<h2 id="kidsCuisine"> Kids Cuisine</h2>
+				<p style="margin-left: 25 pix; margin-right: 25px"> We all had Kids Cuisine at one point in our life and we thought it was the Gordon Ramsay of foods so of course this is a cheap, delicious meal. </p>
+				</div>
+				
+				<div class="recipeColumn">
+				<img class="pic" style="width: 50%" src="Images/kidscuisine.jpg">
+				</div>
+				</div>
+				
+				<div class="recipeRow">
+				<div class="recipeColumn">
+					<table style="margin-left: auto; margin-right: auto;" cellpadding="2" border="2" >
+					<tbody>
+						<tr>
+							<td class="left">
+								<h3> Ingredients </h3>
+							</td>
+							
+							<td class="right">
+								<h3> Quantity </h3>
+							</td>
+						</tr>
+							<td class="left">
+								One Kids Cuisine
+							</td>
+							
+							<td class="right">
+								As many as you want
+							</td>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<div class="recipeColumn">
+					<h3 id="alignLeft"> Instructions </h3>
+						<ol>
+							<li> Open microwave and set the Kids Cuisine in there for 2 minutes. </li>
+							<br>
+							<li> And enjoy! </li>
+							<br>
+							<br>
+						</ol>
+					<a href="#top">Back to Top</a>
+				</div>
+			</div>
+			
+			<div class="recipeRow">
+				<br>
+				<hr>
+				<br>
+			</div>
+			
+			
+			
+			<div class="recipeRow">
+			<div class="recipeColumn">
+				<h2 id="kidsCuisine"> Eggo Waffles</h2>
+				<p style="margin-left: 25 pix; margin-right: 25px"> Eggo Waffles are always a delicious treat in the morning for breakfast. Who could go wrong with fluffy waffles. </p>
+				</div>
+				
+				<div class="recipeColumn">
+				<img class="pic" style="width: 50%" src="Images/legomyeggo.jpg">
+				</div>
+				</div>
+				
+				<div class="recipeRow">
+				<div class="recipeColumn">
+					<table style="margin-left: auto; margin-right: auto;" cellpadding="2" border="2" >
+					<tbody>
+						<tr>
+							<td class="left">
+								<h3> Ingredients </h3>
+							</td>
+							
+							<td class="right">
+								<h3> Quantity </h3>
+							</td>
+						</tr>
+							<td class="left">
+								Eggo Waffles of your choice
+							</td>
+									
+							<td class="right">
+								Two 
+							</td>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<div class="recipeColumn">
+					<h3 id="alignLeft"> Instructions </h3>
+						<ol>
+							<li> Preheat oven to 400 degrees. </li>
+							<br>
+							<li> Place waffles flat on baking sheet in oven for about 5 minutes or until crispy and hot. </li>
+							<br>
+							<li> And enjoy! </li>
+						</ol>
+					<a href="#top">Back to Top</a>
+				</div>
+			</div>
+			
+			<div class="recipeRow">
+				<br>
+				<hr>
+				<br>
+			</div>
+			
+			
+			
+			
+				
+				
+					
+			
+			
     
   </body>
 </html>
