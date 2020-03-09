@@ -1,184 +1,178 @@
 
-  /* Changes the font family of the page. */   
-    body {
-	font-family:"courier" ;}
- 
-
-/* Makes all the text fit without being interfered by the picture. */
+ 	/* Makes the box for the menu bar visible as a box */
 * {
-	box-sizing: border-box;
-	scroll-behavior: smooth}
+box-sizing: border-box; }
 
-/* Makes the scrolling smooth */
-html {
-	scroll-behavior: smooth; }
+/* Creates a table type of layout for everything in the row class */
+.row {
+content: "";
+display: table;
+clear: both; }
 
-/* Changes the color of the background and makes the website fit on the screen */
-body {
-	margin: 0;
-	background-color: black; }
+/* Sets the width and padding for everything in the columnLeft class alongside pushing it all to the left */
+.columnLeft {
+float: left;
+width: 30%
+padding: 20px; }
 
+/* Sets the width and padding for everything in the columnRight class alongside pushing it all to the right */
+.columnRight {	
+float: right;
+width: 70%
+padding: 20px; }	
 
-
-/* keeps a picture in the center and changes the width of the picture 
-while also adding a shadow. */
-.pic {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 25px;
-	width: 90%;
-	background-color: black;
-	box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2); }
-
-/* adds a line to the webpage*/
-.line {
-	display: block;
-	margin: 0px;
-	width: 100%;
-	height: 10px; }
-
-
-/* Puts a column on the left side of the webpage. */
+/* Moves everything in the columnLeft50 class to the left and adds some padding around it. */
 .columnLeft50 {
-	float: left;
-	width: 50%;
-	padding-top: 0px;
-	padding-right: 15px;
-	padding-bottom: 10px;
-	padding-left: 15px; }
+float: left;
+width: 50%;
+padding-top: 0px;
+padding-right: 15px;
+padding-bottom: 10px;
+padding-left: 15px; }
 
-
-/* Puts a column on the right side of the webpage. */
+/* Makes everything in the class move to the right side of the screen, taking up half the screen. Also adds space on all sides.	*/
 .columnRight50 {
-	float: right;
-	width: 50%;
-	padding-top: 0px;
-	padding-right: 15px;
-	padding-bottom: 10px;
-	padding-left: 15px; }
+float: right;
+width: 50%;
+padding-top: 0px;
+padding-right: 15px;
+padding-bottom: 10px;
+padding-left: 15px; }	
 
+/* Aligns the text to the left and adds padding along with a specific for width */
+.recipeColumn {
+float: left;
+width: 50%;
+padding-left: 20px;
+padding-right: 10px;
+padding-top: 10px;
+padding-bottom: 10px; }	
 
-/* Makes all the body content fit on the webpage without getting 
-overlapped by the navigation bar. */
+/* changes width setting for everything in div class recipeColumn */	
+div.recipeColumn {
+width: 100%; }}	
+
+/* displays those in :after as a table to allow for items to be laid out as intended */
+.recipeRow:after {
+content: "";
+display: table;
+clear: both; }	
+
+/* makes some defaults, such as the margin, padding, and height to every item */	
 .content {
-  margin-left: 240px;
-  padding: 1px 16px;
-  height: 100%; }
+margin-left: 240px;
+padding: 1px 16px;
+height: 100%; 
+width: 100%}	
 
-/* Keeps the navigation on the right side of the blog page. */
-.blogNav {
-	width: 25%;
-	min-width: 150px;
-	height: 100%;
-	padding-top: 0px;
-	padding-right: 15px;
-	padding-bottom: 10px;
-	padding-left:0;
-	list-style-type: circle;
-	overflow: auto;
-	position: fixed;
-	top: 45px;
-	right: 0px;
-	z-index: -1;
-	background-color: #eee;
-	box-shadow: 1px 1px 9px 3px rgba(0, 0, 0, 0.2);}
-/* Keeps the blog post inside of the navigation bars */
-.blogPost {
-	float: left;
-	width: 65%;
-	padding-top: 0px;
-	padding-right: 15px;
-	padding-bottom: 10px;
-	padding-left: 15px; }
-/* Makes the color of the link red. */
-a:link {
-	color: Red;	}
-/* Makes the color of the visited link red. */
-a:visited {
-	color: red; }
+/* adds margin defaults for everything in div content */
+div.content {
+margin-top: 40px;
+margin-left: 0; }	
 
-/* Makes the link im hovering over a different color. */
-a:hover {
-	color: blue; }
+/* Adds specifics for each image in the pic class. Shows them as blocks, automatically assigns them based on whatever side theyre on, and gives them a background color and shadow effect surrounding each image */
+.pic {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 25px;
+width: 90%;
+background-color: black;
+box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2); }
 
-/* The navigation bar */
+/* Adds some detais to anything in the box class. Shows it as a block with some padding with color and border */
+.box {
+margin-top: 20%;
+display: block;
+padding-left: 15px;
+padding-right: 15px;
+border: 2px solid #394b58;
+border-radius: 7px;}	
+
+/* Makes the navigation bar lightgrey, and adds a shadow effect around it for aesthetic */
 ul.nav {
-	list-style-type: none;
-	margin: 0;
-  padding: 0;
-  width: 240px;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-  top: 0;
-	box-shadow: 1px 1px 9px 3px rgba(0, 0, 0, 0.2);}
-
-ul.nav li a {
-  display: block;
-  color: #081108;
-  padding: 8px 16px;
-  text-decoration: none; }
-
-/* The colors of the navigation bar when you've clicked on one of the links. */
-ul.nav li a.active {
-  background-color: red;
-  color: white; }
-
-/* Makes the mouse able to hover over the navigation bar links. */
-ul.nav li a:hover {
-  background-color: red;
-  color: white; }
-/* Organizes the navigation bar. */
-@media screen and (max-width: 1200px) {
-  ul.nav {
-		width: 100%;
-		height: auto;
-		position: fixed;
-		top: 0; }
+list-style-type: none;
+margin: 0px;
+padding: 0px;
+background-color: DarkSlateGrey;
+overflow: hidden;
+box-shadow: 1px 1px 9px 3px rgba(0, 0, 0, 0.2); }
 
 
-/* Keeps the images in a certain size. */
-	div.box {
-		margin-top: 10%;}}
+/* Changes the color of the links in the navigation bar to firebrick, adds some padding, and aligns it to the left */
+li a.nav {
+float: left;
+display: block;
+color: Black;
+padding: 8px 16px;
+text-align: left; }
 
-/* Keeps the content on the screen where you can see it,  */
-@media screen and (max-width: 501px) {
-	ul.nav {
-		position: relative;
-		top: 0; }
+/* Changes the color of lists in the row class along with adding padding and aligning it to the left */
+li a.recipeLink {
+color: Black;
+padding: 8px 16px;
+text-align: left; }
 
-	
-/* Keeps the content on the blog page nice and organized. */
-	div.box {
-		margin-top: 0%;}}
-/* both of the td. are the sizes of the tables. */
+/* Changes the color of the box surrounding each link to lightsteelblue and changes the link itself to white in the navigation bar */
+li a:hover {
+background-color: DarkGrey;
+color: Black }
+
+/* Displays everything in the recipeRow class as a table */	
+.recipeRow {
+content: "";
+float: left;
+width: 100%;
+display: table;
+clear: both; }
+
+/* Changes width for items in the td left and right class */
 td.left {
-	width: 275px; }
+width: 275px; }
 
 td.right {
-	width: 125px; }
+width: 125px; }
 
-/* Keeps the recipe columns organized. */
-.recipeColumn {
-  float: left;
-  width: 50%;
-  padding: 10px; }
+/* Changes color, assigns float to left, and changes width to 80% to all in an ol in the instructions class */
+ol .instructions {
+color: DarkSlateGrey;
+float: left;
+width: 80%; }
 
+/* Aligns text with the alignLeft id to the left */
+#alignLeft {
+text-align: left;}
 
-@media screen and (max-width: 575px) {
-  .recipeColumn {
-    width: 100%; }
+/* Changes the color of everything in the body to firebrick and the background lightyellow. Also adds some text style modifications */
+body {
+margin: 0;
+background-color: DarkGrey; 
+color: Black;
+font-family: "courier new", monospace, serif;
+font-weight: bold; }
 
-	div.blogPost {
-		width: 90%; }
+/* Aligns the text to anything within an ol list to the left */
+ol {
+text-align: left; }	
 
-	div.blogNav {
-		width: 0px;
-		height: 0px; }}
+/* Changes the color of each of the categories to their respective colors and aligns text to center*/
+p {
+color: White;
+text-align: center; }
 
-/* changes the font style. */		
-		p.oblique {
-  font-style: oblique;
-  }
+h1 {
+color: DarkSlateGrey;
+text-align: center; }
+
+h2 {
+color: DarkSlateGrey; 
+text-align: center;}
+
+h3 {
+color: DarkSlateGrey; 
+text-align: center; }
+
+h4 {
+color: DarkSlateGrey;
+text-align: center; }
+ 	
